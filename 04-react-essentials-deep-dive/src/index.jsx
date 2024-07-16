@@ -5,5 +5,5 @@ import App from "./App.jsx";
 import "./index.css";
 
 const entryPoint = document.getElementById("root");
-// ReactDOM.createRoot(entryPoint).render(<App />);
-ReactDom.createRoot(entryPoint).render(React.createElement(App));
+ReactDOM.createRoot(entryPoint).render(<App />);
+// ReactDom.createRoot(entryPoint).render(React.createElement(App)); // I don't know why, but this isn't working
