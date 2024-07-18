@@ -7,23 +7,23 @@ const initialGameBoard = [
 ];
 
 export default function GameBoard({ onSelectSquare, activePlayerSymbol }) {
-  const [gameBoard, setGameBoard] = useState(initialGameBoard);
+  //   const [gameBoard, setGameBoard] = useState(initialGameBoard);
 
-  function handleSelectSquare(rowIndex, colIndex) {
-    setGameBoard((prevGameBoard) => {
-      // We're inherently inheriting data; we want the previous state
-      const updatedBoard = [
-        ...prevGameBoard.map((innerArray) => [...innerArray]),
-      ]; // Paste in all old elements
-      updatedBoard[rowIndex][colIndex] = activePlayerSymbol;
-      // We don't want to update in memory as-is because of side-effects.
-      // Instead, we want to reference the old state for an object,
-      // then update and return that
-      return updatedBoard;
-    });
+  //   function handleSelectSquare(rowIndex, colIndex) {
+  //     setGameBoard((prevGameBoard) => {
+  //       // We're inherently inheriting data; we want the previous state
+  //       const updatedBoard = [
+  //         ...prevGameBoard.map((innerArray) => [...innerArray]),
+  //       ]; // Paste in all old elements
+  //       updatedBoard[rowIndex][colIndex] = activePlayerSymbol;
+  //       // We don't want to update in memory as-is because of side-effects.
+  //       // Instead, we want to reference the old state for an object,
+  //       // then update and return that
+  //       return updatedBoard;
+  //     });
 
-    onSelectSquare();
-  }
+  //     onSelectSquare();
+  //   }
 
   return (
     <ol id="game-board">
